@@ -65,10 +65,64 @@ navlinks[5].textContent = "Contact";
 
 const ctatext = document.querySelector("h1");
 ctatext.textContent = siteContent["cta"]["h1"];
+// ctatext.textContent (need to find a way to include line breaks possibly w/ this example:
+// linebreak = document.createElement("br");
+// queryForm.appendChild(linebreak);)
 
 // main img
 
 const mainimg = document.querySelector("#cta-img");
 mainimg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-//
+// button content
+
+const buttonctn = document.querySelector("button");
+buttonctn.textContent = siteContent["cta"]["button"];
+
+// main content / top content
+
+// const features = document.querySelector(
+//   ".main-content .top-content .text-content h4"
+// );
+// features.textContent = siteContent["main-content"]["features-h4"];
+
+// const about = document.querySelector(
+//   ".main-content .top-content:nth-child(2) h4"
+// );
+// about.textContent = siteContent["main-content"]["about-h4"];
+
+// For Each Main Content
+
+const mainContent = document.querySelectorAll(".main-content .text-content");
+const sections = ["features", "about", "services", "product", "vision"];
+mainContent.forEach((el, i) => {
+  const section = sections[i];
+  el.querySelector("h4").textContent =
+    siteContent["main-content"][`${section}-h4`];
+  el.querySelector("p").textContent =
+    siteContent["main-content"][`${section}-content`];
+});
+
+const featuresvar = document.querySelectorAll(
+  ".main-content .top-content .text-content"
+);
+// console.log((featuresvar[1].textContent = "okay"));
+
+// contact info
+
+const contact = document.querySelector(".contact h4");
+contact.textContent = siteContent["contact"]["contact-h4"];
+
+// contact .forEach attempt
+
+const contactinfo = document.querySelectorAll(".container .contact");
+const contacts = ["address", "phone", "email"];
+contactinfo.forEach((el, i) => {
+  const contact = contacts[i];
+  el.querySelector("p").textContent = siteContent["contact"][`${contact}`];
+});
+
+// footer
+
+const footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"];
