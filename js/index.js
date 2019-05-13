@@ -53,13 +53,49 @@ midpage.setAttribute("src", "img/mid-page-accent.jpg");
 
 // nav links
 const navlinks = document.querySelectorAll("header nav a");
-
+const navlink = document.querySelector("header nav");
 navlinks[0].textContent = "Services";
 navlinks[1].textContent = "Product";
 navlinks[2].textContent = "Vision";
 navlinks[3].textContent = "Features";
 navlinks[4].textContent = "About";
 navlinks[5].textContent = "Contact";
+
+const newlink = document.createElement("div");
+newlink.appendChild(document.createTextNode("Learn More"));
+document.body.appendChild(newlink);
+// const hbt = document.createElement("A");
+// const hbtText = document.createTextNode("How Bout That");
+
+// newele.appendChild(newnavtext);
+// // document.getElementsByTagName("nav").appendChild(newele);
+
+// navlink.appendChild(newnavtext);
+// navlink.appendChild(hbtText);
+
+// nav.a.style.color = "green";
+
+// const anothernavtext = document.createTextNode("How Bout That");
+
+// nav link for each attempt
+
+// const getnavitem = document.querySelectorAll("header nav");
+// const navitems = ["1", "2", "4", "3", "5", "6"];
+// getnavitem.forEach((el, i) => {
+//   const navitem = navitems[i];
+//   el.querySelector("a").textContent = siteContent["nav"][`nav-item-${navitem}`];
+// });
+
+// Saving below JIC
+
+// const navitems = [
+//   "nav-item-1",
+//   "nav-item-2",
+//   "nav-item-3",
+//   "nav-item-4",
+//   "nav-item-5",
+//   "nav-item-6"
+// ];
 
 // h1 text
 
