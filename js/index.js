@@ -143,12 +143,17 @@ contact.textContent = siteContent["contact"]["contact-h4"];
 
 // contact .forEach attempt
 
-const contactinfo = document.querySelectorAll(".container .contact");
-const contacts = ["address", "phone", "email"];
-contactinfo.forEach((el, i) => {
-  const contact = contacts[i];
-  el.querySelector("p").textContent = siteContent["contact"][`${contact}`];
-});
+// const contactinfo = document.querySelectorAll(".container .contact");
+// const contacts = ["address", "phone", "email"];
+// contactinfo.forEach((el, i) => {
+//   const contact = contacts[i];
+//   el.querySelector("p").textContent = siteContent["contact"][`${contact}`];
+// });
+
+const contactinfo = document.querySelectorAll(".contact p");
+contactinfo[0].textContent = siteContent["contact"]["address"];
+contactinfo[1].textContent = siteContent["contact"]["phone"];
+contactinfo[2].textContent = siteContent["contact"]["email"];
 
 // footer
 
