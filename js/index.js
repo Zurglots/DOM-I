@@ -107,18 +107,6 @@ mainimg.setAttribute("src", siteContent["cta"]["img-src"]);
 const buttonctn = document.querySelector("button");
 buttonctn.textContent = siteContent["cta"]["button"];
 
-// main content / top content
-
-// const features = document.querySelector(
-//   ".main-content .top-content .text-content h4"
-// );
-// features.textContent = siteContent["main-content"]["features-h4"];
-
-// const about = document.querySelector(
-//   ".main-content .top-content:nth-child(2) h4"
-// );
-// about.textContent = siteContent["main-content"]["about-h4"];
-
 // For Each Main Content
 
 const mainContent = document.querySelectorAll(".main-content .text-content");
