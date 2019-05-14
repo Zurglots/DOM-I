@@ -61,41 +61,33 @@ navlinks[3].textContent = "Features";
 navlinks[4].textContent = "About";
 navlinks[5].textContent = "Contact";
 
-const newlink = document.createElement("div");
-newlink.appendChild(document.createTextNode("Learn More"));
-document.body.appendChild(newlink);
-// const hbt = document.createElement("A");
-// const hbtText = document.createTextNode("How Bout That");
+// dynamic
 
-// newele.appendChild(newnavtext);
-// // document.getElementsByTagName("nav").appendChild(newele);
+// let navlink = document.querySelector("nav a");
 
-// navlink.appendChild(newnavtext);
-// navlink.appendChild(hbtText);
+// navlink.forEach(
+//   (el, i) => (el.textContent = siteContent.navlink[`nav-item-${i + 1}`])
+// );
 
-// nav.a.style.color = "green";
+// above isn't working ^
 
-// const anothernavtext = document.createTextNode("How Bout That");
+// append attempt
 
-// nav link for each attempt
+const newlink = document.createElement("a");
+newlink.textContent = "Learn More";
+navlink.appendChild(newlink);
+newlink.setAttribute("href", "='#'");
+newlink.style.color = "green"; // not sure how to get this to inherit brother element properties from foreach.
 
-// const getnavitem = document.querySelectorAll("header nav");
-// const navitems = ["1", "2", "4", "3", "5", "6"];
-// getnavitem.forEach((el, i) => {
-//   const navitem = navitems[i];
-//   el.querySelector("a").textContent = siteContent["nav"][`nav-item-${navitem}`];
-// });
+const firstLink = document.createElement("a");
+firstLink.textContent = "First Try~!";
+navlink.prepend(firstLink);
+firstLink.setAttribute("href", "='#'");
+firstLink.style.color = "green";
 
-// Saving below JIC
-
-// const navitems = [
-//   "nav-item-1",
-//   "nav-item-2",
-//   "nav-item-3",
-//   "nav-item-4",
-//   "nav-item-5",
-//   "nav-item-6"
-// ];
+navlinks.forEach(function(link) {
+  link.style.color = "green";
+});
 
 // h1 text
 
