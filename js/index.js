@@ -54,30 +54,20 @@ midpage.setAttribute("src", "img/mid-page-accent.jpg");
 // nav links
 const navlinks = document.querySelectorAll("header nav a");
 const navlink = document.querySelector("header nav");
-navlinks[0].textContent = "Services";
-navlinks[1].textContent = "Product";
-navlinks[2].textContent = "Vision";
-navlinks[3].textContent = "Features";
-navlinks[4].textContent = "About";
-navlinks[5].textContent = "Contact";
+// navlinks[0].textContent = "Services";
+// navlinks[1].textContent = "Product";
+// navlinks[2].textContent = "Vision";
+// navlinks[3].textContent = "Features";
+// navlinks[4].textContent = "About";
+// navlinks[5].textContent = "Contact";
 
 // dynamic
-
-// let navlink = document.querySelector("nav a");
-
-// navlink.forEach(
-//   (el, i) => (el.textContent = siteContent.navlink[`nav-item-${i + 1}`])
-// );
-
-// above isn't working ^
-
-// append attempt
 
 const newlink = document.createElement("a");
 newlink.textContent = "Learn More";
 navlink.appendChild(newlink);
 newlink.setAttribute("href", "#");
-newlink.style.color = "green"; // not sure how to get this to inherit brother element properties from foreach.
+newlink.style.color = "green"; // not sure how to get the foreach to color these.
 
 const firstLink = document.createElement("a");
 firstLink.textContent = "First Try~!";
@@ -88,6 +78,12 @@ firstLink.style.color = "green";
 navlinks.forEach(function(link) {
   link.style.color = "green";
 });
+
+// let navlinks = document.querySelector("nav a");
+
+navlinks.forEach(
+  (el, i) => (el.textContent = siteContent["nav"][`nav-item-${i + 1}`])
+);
 
 // h1 text
 
