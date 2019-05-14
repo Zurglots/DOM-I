@@ -76,13 +76,13 @@ navlinks[5].textContent = "Contact";
 const newlink = document.createElement("a");
 newlink.textContent = "Learn More";
 navlink.appendChild(newlink);
-newlink.setAttribute("href", "='#'");
+newlink.setAttribute("href", "#");
 newlink.style.color = "green"; // not sure how to get this to inherit brother element properties from foreach.
 
 const firstLink = document.createElement("a");
 firstLink.textContent = "First Try~!";
 navlink.prepend(firstLink);
-firstLink.setAttribute("href", "='#'");
+firstLink.setAttribute("href", "#");
 firstLink.style.color = "green";
 
 navlinks.forEach(function(link) {
